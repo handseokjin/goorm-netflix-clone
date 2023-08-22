@@ -1,0 +1,51 @@
+.headerContainer, .genreSelectContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+    padding: 20px 20px;
+}
+
+.leftContainer {
+    display: flex;
+    align-items: center;
+}
+
+.netflixLogo {
+    width: 130px;
+    height: 80px;
+    margin-right: 20px;
+}
+
+.contents {
+    font-size: 14px;
+    font-weight: 400;
+    color: white;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.infoContainer {
+    display: flex;
+    align-items: center;
+}
+
+.searchIcon {
+    width: 24px;
+    height: 24px;
+    color: white;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.alertContainer {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.userProfile {
+    width: 32px;
+    height: 32px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
