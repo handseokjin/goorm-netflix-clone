@@ -1,9 +1,27 @@
-.headerContainer, .genreSelectContainer {
+.headerContainer {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+}
+
+.topContainer, .genreContainer {
     display: flex;
     justify-content: space-between;
+    background-color: black;
+    align-items: center;
     align-items: center;
     height: 60px;
-    padding: 20px 20px;
+    padding: 10px 20px;
+}
+
+.genreContainer {
+    background-color: transparent;
+    padding: 5px 40px;
+}
+
+.genreContainerBlack {
+    background-color: black;
 }
 
 .leftContainer {
@@ -48,4 +66,51 @@
     height: 32px;
     margin-left: 10px;
     margin-right: 10px;
+}
+
+.genreSelectContainer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.movieText {
+    font-size: 38px;
+    font-weight: 500;
+    color: white;
+    margin-right: 20px;
+}
+
+.genreSelectBox {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid white;
+    width: 86px;
+    height: 25px;
+    padding: 3px 10px;
+    margin-left: 20px;
+}
+
+.genreSelectName {
+    font-size: 13px;
+    color: white;
+}
+
+.genreSelectArrow {
+    color: white;
+}
+
+.filtercontainer {
+    display: flex;
+
+}
+
+.filter1, .filter2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid white;
+    width: 44px;
+    height: 30px;
 }

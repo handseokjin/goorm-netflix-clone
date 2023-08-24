@@ -8,6 +8,7 @@
     font-weight: 500;
     color: rgb(229, 229, 229);
     text-align: left;
+    justify-content: left;
     padding-left: 40px;
     margin: 0;
 }

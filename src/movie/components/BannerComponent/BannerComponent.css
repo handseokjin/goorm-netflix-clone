@@ -1,0 +1,68 @@
+.bannerImage {
+    position: relative;
+    height: 600px;
+    object-fit: contain;
+    margin-bottom: 20px;
+}
+
+.movieDescriptionContainer {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    max-width: 400px;
+    left: 40px;
+    bottom: 40px;
+}
+
+.movieDescriptionTitle, .movieDescriptionTagline, .movieDescriptionOverview {
+    color: white;
+}
+
+.movieDescriptionButtons {
+    display: flex;
+    margin-top: 10px;
+}
+
+.movieDescriptionPlayButton {
+    display: flex;
+    align-items: center;
+    background-color: white;
+    justify-content: center;
+    align-items: center;
+    min-width: 107px;
+    height: 40px;
+    border: 1px solid white;
+    border-radius: 5px;
+    margin-right: 5px;
+}
+
+.movieDescriptionDetailInfo {
+    display: flex;
+    align-items: center;
+    background-color: lightgray;
+    justify-content: center;
+    align-items: center;
+    padding: 0 20px;
+    height: 40px;
+    border: 1px solid   lightgray;
+    border-radius: 5px;
+    margin-left: 5px;
+}
+
+.movieDescriptionPlayIcon {
+    width: 24px;
+    height: 24px;
+    margin-right: 5px;
+}
+
+.movieDescriptionDetailInfoIcon {
+    color: white;
+    width: 24px;
+    height: 24px;
+}
+
+.movieDescriptionDetailInfoText {
+    color: white;
+    margin-left: 5px;
+}

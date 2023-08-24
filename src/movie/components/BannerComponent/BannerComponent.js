@@ -1,0 +1,76 @@
+import React, {useState, useEffect} from 'react';
+import axios from '../../network/axios';
+import movieData from '../../network/movieData';
+import './BannerComponent.css';
+
+import {PiPlayFill} from 'react-icons/pi';
+import {RiInformationLine} from 'react-icons/ri';
+
+export default function BannerComponent() {
+    const fetchNowPlayingUrl = '/movie/now_playing';
+    const [movie, setMovie] = useState([]);
+
+    useEffect(() => {
+        fetchData();
+    }, []);
+
+    const fetchData = async () => {
+        const result = await axios.get(fetchNowPlayingUrl);
+        const movieId = result.data.results[Math.floor(Math.random()*result.data.results.length)].id;
+        const movieDetail = await axios.get(`movie/${movieId}`, {
+          params: { append_to_respone: "videos" },
+        });
+        console.log(movieDetail.data);
+        
+        setMovie(movieDetail.data);
+    }
+
+    return (
+      <div
+        className="bannerImage"
+        style={{
+          backgroundImage: `url("https://image.tmdb.org/t/p/original/${movie?.backdrop_path}")`,
+          backgroundPosition: "top center",
+          backgroundSize: "cover",
+        }}
+      >
+        <div className="movieDescriptionContainer">
+          <h2 className="movieDescriptionTitle">{movie.title}</h2>
+          <span className="movieDescriptionTagline">{movie.tagline}</span>
+          <p className="movieDescriptionOverview">
+            {movie.overview?.length > 100
+              ? movie.overview.substr(0, 100) + "..."
+              : movie.overview}
+          </p>
+          <div className="movieDescriptionButtons">
+            <div className="movieDescriptionPlayButton">
+              <PiPlayFill className="movieDescriptionPlayIcon" />
+              <span>재생</span>
+            </div>
+            <div className="movieDescriptionDetailInfo">
+              <svg
+                className="movieDescriptionDetailInfoIcon"
+                width="24"
+                color='white'
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                class="ltr-0 e1mhci4z1"
+                data-name="CircleI"
+                aria-hidden="true"
+              >
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2ZM0 12C0 5.37258 5.37258 0 12 0C18.6274 0 24 5.37258 24 12C24 18.6274 18.6274 24 12 24C5.37258 24 0 18.6274 0 12ZM13 10V18H11V10H13ZM12 8.5C12.8284 8.5 13.5 7.82843 13.5 7C13.5 6.17157 12.8284 5.5 12 5.5C11.1716 5.5 10.5 6.17157 10.5 7C10.5 7.82843 11.1716 8.5 12 8.5Z"
+                  fill="currentColor"
+                ></path>
+              </svg>
+              <span className="movieDescriptionDetailInfoText">상세 정보</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    );
+}

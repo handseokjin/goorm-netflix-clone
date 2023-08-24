@@ -1,12 +1,29 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react';
 import './HeaderComponent.css';
 
-import {FiSearch} from 'react-icons/fi'
+import {FiSearch} from 'react-icons/fi';
+import {BiSolidDownArrow} from 'react-icons/bi';
 
 export default function HeaderComponent() {
+  const [showGenreHeader, setShowGenreHeader] = useState(false);
+
+  useEffect(() => {
+    window.addEventListener('scroll', () => {
+      console.log(window.scrollY);
+      if(window.scrollY > 50)
+        setShowGenreHeader(true);
+      else
+        setShowGenreHeader(false);
+    });
+
+    return () => {
+      window.removeEventListener('scroll', () => {});
+    }
+  }, []);
+  
   return (
-    <div>
-      <div className="headerContainer">
+    <div className="headerContainer">
+      <div className="topContainer">
         <div className="leftContainer">
           <img
             className="netflixLogo"
@@ -51,7 +68,59 @@ export default function HeaderComponent() {
           />
         </div>
       </div>
-      <div className="genreContainer"></div>
+      <div
+        className={`genreContainer ${showGenreHeader && "genreContainerBlack"}`}
+      >
+        <div className="genreSelectContainer">
+          <span className="movieText">영화</span>
+          <div className='genreSelectBox'>
+            <span className='genreSelectName'>장르</span>
+            <BiSolidDownArrow className='genreSelectArrow'/>
+          </div>
+        </div>
+        <div className="filtercontainer">
+          <div className="filter1">
+            <svg
+              width="24"
+              height="24"
+              color='white'
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              class="svg-icon svg-icon-rows ltr-0 e1mhci4z1"
+              data-name="List"
+              aria-hidden="true"
+            >
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M24 6H0V4H24V6ZM24 18V20H0V18H24ZM0 13H12V11H0V13Z"
+                fill="currentColor"
+              ></path>
+            </svg>
+          </div>
+          <div className="filter2">
+            <svg
+              width="15"
+              height="15"
+              color='white'
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              class="svg-icon svg-icon-grid ltr-0 e1mhci4z1"
+              data-name="GridFill"
+              aria-hidden="true"
+            >
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M1 3C0.447715 3 0 3.44772 0 4V10C0 10.5523 0.447715 11 1 11H10C10.5523 11 11 10.5523 11 10V4C11 3.44772 10.5523 3 10 3H1ZM1 13C0.447715 13 0 13.4477 0 14V20C0 20.5523 0.447715 21 1 21H10C10.5523 21 11 20.5523 11 20V14C11 13.4477 10.5523 13 10 13H1ZM13 4C13 3.44772 13.4477 3 14 3H23C23.5523 3 24 3.44772 24 4V10C24 10.5523 23.5523 11 23 11H14C13.4477 11 13 10.5523 13 10V4ZM14 13C13.4477 13 13 13.4477 13 14V20C13 20.5523 13.4477 21 14 21H23C23.5523 21 24 20.5523 24 20V14C24 13.4477 23.5523 13 23 13H14Z"
+                fill="currentColor"
+              ></path>
+            </svg>
+          </div>
+        </div>
+      </div>
     </div>
   );
 }

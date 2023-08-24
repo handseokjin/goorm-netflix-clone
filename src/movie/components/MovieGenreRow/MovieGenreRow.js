@@ -8,7 +8,6 @@ export default function MovieGenreRow({id, data}) {
     const [movieData, setMovieData] = useState([]);
 
     useEffect(() => {
-        console.log(id);
         fetchData();
     }, []);
 
