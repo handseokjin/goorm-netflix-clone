@@ -1,0 +1,74 @@
+.modalBackground {
+    display: flex;
+    align-items: center;
+    padding: 40px 20px;
+}
+
+.modalContentsContainer {
+    background-color: rgb(20, 20, 20);
+    margin: 0 auto;
+    max-width: 900px;
+    height: 300px;
+}
+
+.modalPosterContainer {
+    position: relative;
+    width: 900px;
+    height: 500px;
+    object-fit: contain;
+}
+
+.modalDetailCloseButton{
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+}
+
+.modalDetailTitleContainer {
+    position: absolute;
+    left: 50px;
+    bottom: 80px;
+}
+
+
+.movieDetilaTitle {
+    color: white;
+    text-align: left;
+}
+
+.movieDescriptionPlayButton {
+    display: flex;
+    align-items: center;
+    background-color: white;
+    justify-content: center;
+    align-items: center;
+    min-width: 107px;
+    height: 40px;
+    border: 1px solid white;
+    border-radius: 5px;
+    margin-right: 5px;
+}
+
+.movieDescriptionPlayButton:hover {
+    opacity: 0.8;
+    cursor: pointer;
+}
+
+.movieDetailModalIconContainer {
+    display: flex;
+    flex-direction: row;
+}
+
+.circlePlusIcon, .circleThumbIcon {
+    color: white;
+    margin-left: 5px;
+    margin-right: 5px;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+}
+
+.circlePlusIcon:hover, .circleThumbIcon:hover {
+    color: lightgray;
+}

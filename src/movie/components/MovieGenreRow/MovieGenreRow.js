@@ -8,12 +8,11 @@ import {CiCirclePlus} from 'react-icons/ci';
 import {BsHandThumbsUp} from 'react-icons/bs';
 import {AiOutlineDownCircle} from 'react-icons/ai'
 
-export default function MovieGenreRow({id, data}) {
+export default function MovieGenreRow({id, data, movieListCallback}) {
     const [movieData, setMovieData] = useState([]);
     const [hoveredKeyValue, setHoveredKeyValue] = useState(-1);
     const [movieDetailData, setMovieDetailData] = useState({});
-    const [isMovieDetailModal, setIsMovieDetailModal] = useState(false);
-
+    
     useEffect(() => {
         fetchData();
     }, []);
@@ -33,7 +32,6 @@ export default function MovieGenreRow({id, data}) {
 
       console.log('--- hovered movie detail ---');
       console.log(movieDetail);
-
       console.log(movieDetailData.runtime/60)
 
       if(movieDetail !== undefined && movieDetail !== null) {
@@ -49,7 +47,8 @@ export default function MovieGenreRow({id, data}) {
 
     const showMovieDetailModal = () => {
       setHoveredKeyValue(-1);
-      setMovieDetailData({});
+      movieListCallback(true, movieDetailData);
+      //setIsMovieDetailModal(!isMovieDetailModal);
       console.log('모달 보이기');
     }
 
@@ -89,9 +88,10 @@ export default function MovieGenreRow({id, data}) {
                         <CiCirclePlus className="circlePlusIcon" />
                         <BsHandThumbsUp className="circleThumbIcon" />
                       </div>
-                      <AiOutlineDownCircle 
-                        className="arrowDownIcon" 
-                        onClick={() => showMovieDetailModal()}/>
+                      <AiOutlineDownCircle
+                        className="arrowDownIcon"
+                        onClick={() => showMovieDetailModal()}
+                      />
                     </div>
                     <div>
                       <p className="movieDetailRuntime">
@@ -128,6 +128,8 @@ export default function MovieGenreRow({id, data}) {
             <span className="arrow">{">"}</span>
           </div>
         </div>
+
+        
       </div>
     );
 }

@@ -9,7 +9,7 @@ import {PiPlayFill} from 'react-icons/pi';
 export default function BannerComponent() {
     const fetchNowPlayingUrl = '/movie/now_playing';
     const [movie, setMovie] = useState([]);
-    const navigate = useNavigate();
+    //const navigate = useNavigate();
 
     useEffect(() => {
         fetchData();
@@ -28,10 +28,10 @@ export default function BannerComponent() {
     }
 
     const moveMovieDetailPage = () => {
-      if(movie.videos && movie.videos.results.length > 0)
-        navigate(`/detail?k=${movie.videos.results[0].key}`);
-      else
-        navigate(`/detail?k=YK7vtj9t4ek`);
+      // if(movie.videos && movie.videos.results.length > 0)
+      //   navigate(`/detail?k=${movie.videos.results[0].key}`);
+      // else
+      //   navigate(`/detail?k=YK7vtj9t4ek`);
     }
 
     return (
