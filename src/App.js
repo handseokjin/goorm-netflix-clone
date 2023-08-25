@@ -1,3 +1,4 @@
+import MainSeries from './series/MainSeries';
 import './App.css';
 import { RecoilRoot } from 'recoil';
 import Home from './component/Home/home';
@@ -12,6 +13,7 @@ function App() {
       </RecoilRoot>
       <LanguagePage/>
       <Mainstream/>
+      <MainSeries/>
     </div>
   );
 }
