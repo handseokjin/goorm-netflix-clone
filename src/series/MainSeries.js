@@ -1,10 +1,10 @@
 import React from 'react'
 import SeriesNav from './SeriesNav.js';
-import './MainSeries.css';
+import styles from './MainSeries.module.css';
 
 export default function MainSeries() {
   return (
-    <div>
+    <div className={styles.main_series}>
       <SeriesNav/>
     </div>
   )
