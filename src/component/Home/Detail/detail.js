@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import './detail.css';
 import { useRecoilState } from 'recoil';
 import { popupState } from '../recoil/Popup';
-// import MoreCardItem from './MoreCardItem';
 
 export default function Detail() {
   const [popup, setPopup] = useRecoilState(popupState);
