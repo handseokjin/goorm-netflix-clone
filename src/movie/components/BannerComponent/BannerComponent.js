@@ -24,7 +24,6 @@ export default function BannerComponent() {
 
         console.log("<Banner data>");
         console.log(movieDetail);
-        
         setMovie(movieDetail);
     }
 

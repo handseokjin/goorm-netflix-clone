@@ -89,11 +89,61 @@
     display: none;
 }
 
-.genrePoster {
-    width: 100%;
-    height: 130px;
+.genrePosterContainer {
     padding-left: 2.5px;
     padding-right: 2.5px;
+    transition: transform 450ms;
+    cursor: pointer;
+}
+
+.genrePosterContainer:hover {
+    transform: scale(1.2);
+    background-color: rgb(20, 20, 20);
+}
+
+.genrePoster {
+    width: 300px;
     object-fit: contain;
-    border-radius: 4px;
+    border-radius: 8px;
+}
+
+.movieDetailInfoContainer {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    padding: 10px 10px;
+}
+
+.movieDetailInfoRow1 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.circlePlayIcon, .circlePlusIcon, .circleThumbIcon, .arrowDownIcon {
+    color: white;
+    margin-left: 5px;
+    margin-right: 5px;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+}
+
+.circlePlayIcon:hover, .circlePlusIcon:hover, .circleThumbIcon:hover, .arrowDownIcon:hover {
+    color: lightgray;
+}
+
+.movieDetailRuntime {
+    font-size: 16px;
+    font-weight: 400;
+    color: rgb(188, 188, 188);
+    padding-left: 5px;
+}
+
+.movieDetailDataGenreName {
+    font-size: 16px;
+    font-weight: 400;
+    color: white;
+    margin-bottom: 10px;
+    padding-left: 5px;
 }

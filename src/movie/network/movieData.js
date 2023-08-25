@@ -1,9 +1,9 @@
 const movieData = [
-    {
-        id: 1,
-        name: '요즘 트렌드 영화',
-        url: '/trending/all/week'
-    },
+    // {
+    //     id: 1,
+    //     name: '요즘 트렌드 영화',
+    //     url: '/trending/all/week'
+    // },
     {
         id: 2,
         name: '최고 평점 영화',
