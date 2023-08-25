@@ -2,7 +2,7 @@ import React, {useState, useEffect} from 'react';
 import { useNavigate } from "react-router-dom";
 import axios from '../../network/axios';
 import movieData from '../../network/movieData';
-import './BannerComponent.css';
+import styles from './BannerComponent.module.css';
 
 import {PiPlayFill} from 'react-icons/pi';
 
@@ -36,31 +36,31 @@ export default function BannerComponent() {
 
     return (
       <div
-        className="bannerImage"
+        className={`${styles.bannerImage}`}
         style={{
           backgroundImage: `url("https://image.tmdb.org/t/p/original/${movie?.backdrop_path}")`,
           backgroundPosition: "top center",
           backgroundSize: "cover",
         }}
       >
-        <div className="movieDescriptionContainer">
-          <h1 className="movieDescriptionTitle">{movie.title}</h1>
-          <h3 className="movieDescriptionTagline">{movie.tagline}</h3>
-          <p className="movieDescriptionOverview">
+        <div className={`${styles.movieDescriptionContainer}`}>
+          <h1 className={`${styles.movieDescriptionTitle}`}>{movie.title}</h1>
+          <h3 className={`${styles.movieDescriptionTagline}`}>{movie.tagline}</h3>
+          <p className={`${styles.movieDescriptionOverview}`}>
             {movie.overview?.length > 100
               ? movie.overview.substr(0, 100) + "..."
               : movie.overview}
           </p>
-          <div className="movieDescriptionButtons">
+          <div className={`${styles.movieDescriptionButtons}`}>
             <div 
-              className="movieDescriptionPlayButton"
+              className={`${styles.movieDescriptionPlayButton}`}
               onClick={() => moveMovieDetailPage()}>
-              <PiPlayFill className="movieDescriptionPlayIcon" />
+              <PiPlayFill className={`${styles.movieDescriptionPlayIcon}`} />
               <span>재생</span>
             </div>
-            <div className="movieDescriptionDetailInfo">
+            <div className={`${styles.movieDescriptionDetailInfo}`}>
               <svg
-                className="movieDescriptionDetailInfoIcon"
+                className={`${styles.movieDescriptionDetailInfoIcon}`}
                 width="24"
                 color='white'
                 height="24"
@@ -78,7 +78,7 @@ export default function BannerComponent() {
                   fill="currentColor"
                 ></path>
               </svg>
-              <span className="movieDescriptionDetailInfoText">상세 정보</span>
+              <span className={`${styles.movieDescriptionDetailInfoText}`}>상세 정보</span>
             </div>
           </div>
         </div>
