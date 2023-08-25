@@ -1,0 +1,50 @@
+.language__Nav{
+top:0;
+padding-top: 5px;
+position: fixed;
+display: flex;
+width: 100%;
+z-index: 200;
+background-color: #221F1F;
+align-items: center;
+
+}
+.logo__btn{
+    background-color:  #221F1F;
+    border: none;
+    padding-left: 58px;
+    padding-top: 7px;    
+}
+.logo__btn img{
+    width: 92px;
+    height: 50px;
+    padding: 0;
+
+}
+
+.list_tab{
+    margin-left: 25px;
+    flex-grow : 2;
+}
+.Nav__list{
+    padding: 0 12px;
+    border: none;
+    background-color: #221F1F;
+    color:white;
+    font-size: 16px;
+  
+}
+
+
+.right__nav{
+padding-right: 58px;
+display: flex;
+}
+
+.search, .notification {
+    margin-right: 25px;
+}
+.user__avatar img{
+    width:30px;
+    border-radius: 3px;
+}
