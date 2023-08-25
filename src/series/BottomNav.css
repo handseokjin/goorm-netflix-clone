@@ -1,0 +1,58 @@
+.BottomNavContainer{
+  display:flex;
+  justify-content: space-between;
+  background-color:black;
+}
+
+.BottomNavTransp{
+  display:flex;
+  justify-content:space-between;
+}
+
+.left_side_container{
+  margin:20px;
+  margin-left:30px;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+
+.bot_nav_series{
+  display:inline-block;
+  color:white;
+  font-size:40px;
+  margin:0px;
+  margin-right:35px;
+}
+
+.bot_nav_genre{
+  display:inline-block;
+  background-color:black;
+  border:2px solid;
+  color:white;
+  padding:2px;
+} 
+
+.right_side_container{
+  margin:20px;
+  margin-right:20px;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+
+.align_sector{
+  border:1px solid;
+  padding:5px;
+  width: 30px;
+  height:15px;
+  color:white;
+}
+
+.rect_sector{
+  border:1px solid;
+  padding:5px;
+  width:30px;
+  height:15px;
+  color:white;
+}

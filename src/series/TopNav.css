@@ -1,0 +1,54 @@
+.TopNavBox{
+  display: flex;
+  justify-content:space-between;
+  align-items:center;
+  width: 100%;
+  padding:10px;
+  background-color: black;
+}
+
+.TopNavLeftContainer{
+  padding-left:10px;
+  display:flex;
+  color:white;
+  justify-content:space-evenly;
+}
+
+.top_nav_left_content{
+  display:inline-block;
+  margin:10px
+}
+
+.top_nav_left_content:hover{
+  color:  rgba(255, 255, 255, 0.5);
+  cursor:pointer;
+}
+
+.TopNavRightContainer{
+  padding-right:50px;
+  color:white;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+
+.top_nav_right_content{
+  display:inline-block;
+  margin:10px;
+}
+
+
+.logo_image{
+  width: 100px;
+  margin-right:10px;
+}
+
+.mag_glass{
+  color:white;
+  font-size:25px;
+}
+
+.nav_bell{
+  color: white;
+  font-size:25px;
+}
