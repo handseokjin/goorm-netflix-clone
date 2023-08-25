@@ -81,6 +81,10 @@
     margin-right: 20px;
 }
 
+.selectContainer {
+    position: relative;
+}
+
 .genreSelectBox {
     display: flex;
     justify-content: space-between;
@@ -90,6 +94,7 @@
     height: 25px;
     padding: 3px 10px;
     margin-left: 20px;
+    cursor: pointer;
 }
 
 .genreSelectName {
@@ -101,9 +106,39 @@
     color: white;
 }
 
+.eachGenreContainer {
+    position: absolute;
+    left: 20px;
+    bottom: -230px;
+    opacity: 0;
+    transition: opacity 0.15s;
+    white-space: nowrap;
+}
+
+.eachGenreContainer.active {
+    opacity: 1;
+}
+
+.eachGenreSelectContainer {
+    display: flex;
+    flex-wrap: wrap;
+    width: 400px;
+    background-color: black;
+    padding: 5px 10px;
+    text-align: left;
+}
+
+.eachGenreName {
+    width: 30%;
+    color: white;
+    list-style: none;
+    padding: 5px;
+    font-size: 14px;
+    font-weight: 400;
+}
+
 .filtercontainer {
     display: flex;
-
 }
 
 .filter1, .filter2 {

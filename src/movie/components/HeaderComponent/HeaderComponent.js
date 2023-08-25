@@ -3,9 +3,11 @@ import './HeaderComponent.css';
 
 import {FiSearch} from 'react-icons/fi';
 import {BiSolidDownArrow} from 'react-icons/bi';
+import movieGenreData from '../../network/movieGenreData';
 
 export default function HeaderComponent() {
   const [showGenreHeader, setShowGenreHeader] = useState(false);
+  const [isShowGenreSelectBox, setIsShowGenreSelectBox] = useState(false)
 
   useEffect(() => {
     window.addEventListener('scroll', () => {
@@ -20,6 +22,11 @@ export default function HeaderComponent() {
       window.removeEventListener('scroll', () => {});
     }
   }, []);
+
+  const clickGenreSelectBox = () => {
+    console.log('!!!!!!!!!!!!!!1');
+    setIsShowGenreSelectBox(!isShowGenreSelectBox);
+  }
   
   return (
     <div className="headerContainer">
@@ -73,9 +80,24 @@ export default function HeaderComponent() {
       >
         <div className="genreSelectContainer">
           <span className="movieText">영화</span>
-          <div className='genreSelectBox'>
-            <span className='genreSelectName'>장르</span>
-            <BiSolidDownArrow className='genreSelectArrow'/>
+          <div className='selectContainer'>
+            <div className="genreSelectBox"
+              onClick={() => clickGenreSelectBox()}>
+              <span className="genreSelectName">장르</span>
+              <BiSolidDownArrow className="genreSelectArrow" />
+            </div>
+            <div className={`eachGenreContainer ${
+                isShowGenreSelectBox ? 'active' : ''
+              }`}>
+              <ul className='eachGenreSelectContainer'>
+                {movieGenreData.map((data) => (
+                  <li
+                    className='eachGenreName'>
+                      {data.name}
+                  </li>
+                ))}
+              </ul>
+            </div>
           </div>
         </div>
         <div className="filtercontainer">
@@ -83,7 +105,7 @@ export default function HeaderComponent() {
             <svg
               width="24"
               height="24"
-              color='white'
+              color="white"
               viewBox="0 0 24 24"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
@@ -103,7 +125,7 @@ export default function HeaderComponent() {
             <svg
               width="15"
               height="15"
-              color='white'
+              color="white"
               viewBox="0 0 24 24"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"

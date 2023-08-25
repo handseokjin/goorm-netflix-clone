@@ -6,6 +6,7 @@ import './MovieGenreRow.css';
 
 export default function MovieGenreRow({id, data}) {
     const [movieData, setMovieData] = useState([]);
+    const [hoveredKeyValue, setHoveredKeyValue] = useState(-1);
 
     useEffect(() => {
         fetchData();
@@ -16,6 +17,10 @@ export default function MovieGenreRow({id, data}) {
         console.log(result);
 
         setMovieData(result.data.results);
+    }
+
+    const handleHover = (id) => {
+      setHoveredKeyValue(id);
     }
 
     return (
@@ -34,10 +39,11 @@ export default function MovieGenreRow({id, data}) {
           </div>
 
           <div id={id} className="genrePosters">
-            {movieData.map((data) => (
+            {movieData.map((data, index) => (
               <img
                 key={data.id}
                 className="genrePoster"
+                onMouseOver={() => handleHover(index)}
                 src={`https://image.tmdb.org/t/p/original/${data.backdrop_path}`}
                 alt={data.name}
               />

@@ -1,14 +1,15 @@
 import React, {useState, useEffect} from 'react';
+import { useNavigate } from "react-router-dom";
 import axios from '../../network/axios';
 import movieData from '../../network/movieData';
 import './BannerComponent.css';
 
 import {PiPlayFill} from 'react-icons/pi';
-import {RiInformationLine} from 'react-icons/ri';
 
 export default function BannerComponent() {
     const fetchNowPlayingUrl = '/movie/now_playing';
     const [movie, setMovie] = useState([]);
+    const navigate = useNavigate();
 
     useEffect(() => {
         fetchData();
@@ -17,12 +18,21 @@ export default function BannerComponent() {
     const fetchData = async () => {
         const result = await axios.get(fetchNowPlayingUrl);
         const movieId = result.data.results[Math.floor(Math.random()*result.data.results.length)].id;
-        const movieDetail = await axios.get(`movie/${movieId}`, {
-          params: { append_to_respone: "videos" },
+        const {data: movieDetail} = await axios.get(`movie/${movieId}`, {
+          params: {append_to_response: "videos"}
         });
-        console.log(movieDetail.data);
+
+        console.log("<Banner data>");
+        console.log(movieDetail);
         
-        setMovie(movieDetail.data);
+        setMovie(movieDetail);
+    }
+
+    const moveMovieDetailPage = () => {
+      if(movie.videos && movie.videos.results.length > 0)
+        navigate(`/detail?k=${movie.videos.results[0].key}`);
+      else
+        navigate(`/detail?k=YK7vtj9t4ek`);
     }
 
     return (
@@ -35,15 +45,17 @@ export default function BannerComponent() {
         }}
       >
         <div className="movieDescriptionContainer">
-          <h2 className="movieDescriptionTitle">{movie.title}</h2>
-          <span className="movieDescriptionTagline">{movie.tagline}</span>
+          <h1 className="movieDescriptionTitle">{movie.title}</h1>
+          <h3 className="movieDescriptionTagline">{movie.tagline}</h3>
           <p className="movieDescriptionOverview">
             {movie.overview?.length > 100
               ? movie.overview.substr(0, 100) + "..."
               : movie.overview}
           </p>
           <div className="movieDescriptionButtons">
-            <div className="movieDescriptionPlayButton">
+            <div 
+              className="movieDescriptionPlayButton"
+              onClick={() => moveMovieDetailPage()}>
               <PiPlayFill className="movieDescriptionPlayIcon" />
               <span>재생</span>
             </div>
