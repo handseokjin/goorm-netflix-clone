@@ -1,0 +1,71 @@
+.FooterContainer {
+    background-color: rgba(0, 0, 0, 0.7) 10%;
+    padding: 20px;
+}
+
+.FooterContentsContainer {
+    max-width: 736px;
+    margin: 0 auto;
+}
+
+.iconContainer {
+    display: flex;
+    gap: 25px;
+    cursor: pointer;
+    margin-bottom: 13px;
+}
+
+.linkContainer {
+    margin-bottom: 20px;
+}
+
+.linkCollection {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: left;
+    padding-inline-start: 0;
+}
+
+.eachLink {
+    width: 25%;
+    margin-bottom: 13px;
+    text-align: left;
+    list-style-type: none;
+}
+
+.eachLinkText {
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 400;
+    color: rgb(128, 128, 128);
+}
+
+.eachLinkText:hover {
+    text-decoration: underline;
+}
+
+.serviceCodeContainer {
+    text-align: left;
+    margin-bottom: 30px;
+}
+
+.serviceCodeText {
+    color: rgb(128, 128, 128);
+    border: 1px solid rgb(128, 128, 128);
+    padding: 5px;
+    font-size: 13px;
+}
+
+.serviceCodeText:hover {
+    color: #fff;
+    cursor: pointer;
+}
+
+.descriptionText {
+    font-size: 11px;
+    font-weight: 400;
+    color: rgb(128, 128, 128);
+    text-align: left;
+    margin-top: 2px;
+    margin-bottom: 2px;
+}
