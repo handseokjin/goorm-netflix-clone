@@ -1,0 +1,151 @@
+.headerContainer {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+}
+
+.topContainer, .genreContainer {
+    display: flex;
+    justify-content: space-between;
+    background-color: black;
+    align-items: center;
+    align-items: center;
+    height: 60px;
+    padding: 10px 20px;
+}
+
+.genreContainer {
+    background-color: transparent;
+    padding: 5px 40px;
+}
+
+.genreContainerBlack {
+    background-color: black;
+}
+
+.leftContainer {
+    display: flex;
+    align-items: center;
+}
+
+.netflixLogo {
+    width: 130px;
+    height: 80px;
+    margin-right: 20px;
+}
+
+.contents {
+    font-size: 14px;
+    font-weight: 400;
+    color: white;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.infoContainer {
+    display: flex;
+    align-items: center;
+}
+
+.searchIcon {
+    width: 24px;
+    height: 24px;
+    color: white;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.alertContainer {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.userProfile {
+    width: 32px;
+    height: 32px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.genreSelectContainer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.movieText {
+    font-size: 38px;
+    font-weight: 500;
+    color: white;
+    margin-right: 20px;
+}
+
+.selectContainer {
+    position: relative;
+}
+
+.genreSelectBox {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid white;
+    width: 86px;
+    height: 25px;
+    padding: 3px 10px;
+    margin-left: 20px;
+    cursor: pointer;
+}
+
+.genreSelectName {
+    font-size: 13px;
+    color: white;
+}
+
+.genreSelectArrow {
+    color: white;
+}
+
+.eachGenreContainer {
+    position: absolute;
+    left: 20px;
+    bottom: -230px;
+    opacity: 0;
+    transition: opacity 0.15s;
+    white-space: nowrap;
+}
+
+.eachGenreContainer.active {
+    opacity: 1;
+}
+
+.eachGenreSelectContainer {
+    display: flex;
+    flex-wrap: wrap;
+    width: 400px;
+    background-color: black;
+    padding: 5px 10px;
+    text-align: left;
+}
+
+.eachGenreName {
+    width: 30%;
+    color: white;
+    list-style: none;
+    padding: 5px;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.filtercontainer {
+    display: flex;
+}
+
+.filter1, .filter2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid white;
+    width: 44px;
+    height: 30px;
+}
