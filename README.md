@@ -12,7 +12,7 @@
 <br/><br/>
 
 
-## 3. 기술스택
+## 3. 인프라 구조
 <img width="740" alt="기술스택 구조" src="https://github.com/handseokjin/goorm-netflix-clone/assets/32458465/91c2bef0-272e-4b9c-9a95-6d65ba68f229">
 <br/><br/>
 
