@@ -1,70 +1,38 @@
-# Getting Started with Create React App
+# [토이 프로젝트] 넷플릭스 클론코딩
+ 
+## 1. 프로젝트 설명
+구름톤 트레이닝 과정에서 진행한 팀별 넷플릭스 클론 코딩입니다. 서버를 제외하고 react를 이용해 프론트단 클론 코딩을 진행하였습니다.
+<br/><br/>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+## 2. 담당 부분
+ - 영화 탭 화면 구성
+ - 영화 상세 페이지
+<img width="850" alt="전체 흐름" src="https://github.com/handseokjin/goorm-netflix-clone/assets/32458465/9fd8d249-b385-4324-bfd7-ba8b22181053">
+<br/><br/>
 
-In the project directory, you can run:
 
-### `npm start`
+## 3. 기술스택
+<img width="740" alt="기술스택 구조" src="https://github.com/handseokjin/goorm-netflix-clone/assets/32458465/91c2bef0-272e-4b9c-9a95-6d65ba68f229">
+<br/><br/>
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## 4. 기술적 경험
+ - 사용되는 메모리 자원의 감소 등을 위해 `함수형 컴포넌트` 기반의 리액트 개발
+ - 코드의 간결성 및 가독성을 위해 useState, useEffect 등과 같은 `리액트 훅`을 사용
+ - 좀 더 자연스러운 UX를 위해 `React Router` 사용
+ - api 데이터를 빠르게 가져오기 위해 `async await`의 비동기 호출 방식 사용
+ - http 서버 통신을 위해 Promise 기반이며 브라우저 호환성이 뛰어난 `axios 라이브러리`를 이용
+ - `React Icons`를 이용한 아이콘 사용
+ - 팀원들과 함께 github를 통해 협업하여 진행
+<br/><br/>
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## 5. 테크 스택
+ - FrontEnd : React, VSCode
+ - Version Control : Github
+<br/><br/>
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## 6. 회고
+ 이전에 했던 인스타그램 클론 코딩에 이어 이번에는 서버와의 연동을 진행해야 하는 심화된 클론코딩 프로젝트를 해 보며 리액트 전반에 더욱 익숙해질 수 있었습니다. 이를 통해 리액트 전반의 화면 구성을 할 수 있고 서버와의 연동을 통한 데이터 처리도 해 보는 경험을 할 수 있었습니다. 또한 마찬가지로 팀원들과 함께 github를 통해 branch를 만들고 merge를 하는 등의 협업 경험도 좋은 경험이었습니다.
